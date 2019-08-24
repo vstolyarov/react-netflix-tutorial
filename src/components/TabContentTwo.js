@@ -75,7 +75,7 @@ const TabContainer = styled.div`
             grid-column: 10 / 12;
         }
     
-        // Tab Bottom Content
+    // Tab Bottom Content
     .tab-bottom-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -83,7 +83,6 @@ const TabContainer = styled.div`
         text-align: center;
         margin-top: 2rem;
     }
-// Tab Bottom Content
     h3 {
         margin: 0.5rem 0;
     }
