@@ -4,29 +4,38 @@ import TabDoor from './tabs_nav/TabDoor'
 import TabDevices from './tabs_nav/TabDevices'
 import TabPrices from './tabs_nav/TabPrices'
 import '../css/TabsNav.css'
+import TabContentOne from './TabContentOne'
 
 class TabComponent extends Component {
-    state={
+    state = {
         tabIndex: 0
     }
     render() {
         return (
             <div>
-                <Tabs className="tabs" selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({tabIndex})}>
+                <Tabs className="tabs" selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
                     <TabList className="tab-nav-container">
-                        <Tab className={`${this.state.tabIndex === 0 ? 'active' : null}`}>
+                        <Tab
+                            className={`${
+                                this.state.tabIndex === 0 ? 'tab-selected active' : null
+                                }`}
+                        >
                             <TabDoor />
-                            <p><strong>No commitments<br />Cancel online at anytime</strong></p>
+                            <p style={{ marginBottom: '1.875rem' }}><strong>No commitments<br />Cancel online at anytime</strong></p>
                         </Tab>
-                        <Tab className={`${this.state.tabIndex === 1 ? 'active' : null}`}>
+                        <Tab className={`${this.state.tabIndex === 1 ? 'tab-selected active' : null}`}>
                             <TabDevices />
 
                             <p style={{ marginTop: '-5.3125rem' }}><strong>Watch anywhere</strong></p>
                         </Tab>
-                        <Tab className={`${this.state.tabIndex === 2 ? 'active' : null}`}>
+                        <Tab className={`${this.state.tabIndex === 2 ? 'tab-selected active' : null}`}>
                             <TabPrices /><p><strong>Pick your price</strong></p>
                         </Tab>
                     </TabList>
+                    {/* Tabs Content */}
+                    <TabPanel>
+                            <TabContentOne/>
+                    </TabPanel>
                 </Tabs>
             </div>
         )

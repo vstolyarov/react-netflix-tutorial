@@ -8,6 +8,7 @@ class Main extends Component {
             <div>
                 <Header/>
                 <TabComponent/>
+                
             </div>
           );
     }
