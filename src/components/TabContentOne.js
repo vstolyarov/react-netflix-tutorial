@@ -1,17 +1,20 @@
 import React from 'react'
 import Img from '../images/tab-1-pic.png'
 import styled from 'styled-components'
+import { Button } from './Button'
 
 function TabContentOne() {
     return (
         <TabContentContainer>
             <div className="container">
                 <div className="tab-content">
+                    <div>
                     <span style={{marginBottom: '2rem'}}>
                         If you decide Neflix isn't for you - no problem.No commitement. Cancel online anytime.
                     </span>
                     <br />
-                    <button>try it now</button>
+                    <Button style={{marginBottom: '2rem'}}>try it now</Button>
+                    </div>
                     <img src={Img} alt={"Img"} />
                 </div>
             </div>
@@ -29,7 +32,7 @@ const TabContentContainer = styled.div`
     .container {
         margin: 0 10%;
     }
-    
+
     img {
         width: 31.875rem;
     }
