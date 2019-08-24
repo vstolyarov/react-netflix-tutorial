@@ -68,7 +68,7 @@ const TabContainer = styled.div`
         }
     
     span {
-            grid - column: 1 / 8;
+            grid-column: 1 / 8;
         }
     
     .btn {
