@@ -96,8 +96,7 @@ class Footer extends Component {
                        &nbsp;&nbsp;English&nbsp;&nbsp;
                        <Icon icon={arrowSortedDown} />
                    </div>
-               </div>
-               
+                </div>
                 {/* Toggle Language Content */}
                 {this.state.langContent && (
                     <div className="lang-toggle">
@@ -108,9 +107,11 @@ class Footer extends Component {
                             <li>Español</li>
                         </ul>
                     </div>
+                   
                 )}
+                
                 <span style={{ marginLeft: '15%', fontSize: '0.9rem' }}>
-                        Netflix USA
+                    Netflix USA
                     </span>
                     
             </FooterContainer>
@@ -157,7 +158,7 @@ const FooterContainer = styled.footer`
         width: 8rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 2rem 0 2rem;
+        margin: 2rem 0 0;
         cursor: pointer;
     }
 
@@ -166,7 +167,6 @@ const FooterContainer = styled.footer`
         margin-left: 15%;
         position: relative;
         width: 8rem;
-           
     }
 
     .lang-toggle ul {
@@ -178,5 +178,6 @@ const FooterContainer = styled.footer`
             background: #0085ff; 
             color: #fff;
         }
+        margin: 0 0 0;
     }
 `;
